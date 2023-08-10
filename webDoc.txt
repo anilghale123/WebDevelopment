@@ -1,0 +1,8 @@
+ display : block ---> whole row cover  ,,, inline block   ----> cover only its own area
+  image center ...>  display: flex;
+			justify-content: center;
+			align-items: center;
+
+  target = blank   ---> arko website kholda naya tab ma kholxa
+ 
+   alt = "" --> when internet down show that message
