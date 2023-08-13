@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            color: #333;
+        }
+
+        #form {
+            width: 300px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 5px;
+/*            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);*/
+        }
+
+       /* label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }*/
+
+        input[type="text"],
+        input[type="password"],
+        input[type="number"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+       
+
+       
+
+        input[type="submit"],
+        input[type="reset"],
+        input[type="button"] {
+            display: inline-block;
+            padding: 8px 20px;
+            margin-right: 10px;
+            background-color: #337ab7;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover,
+        input[type="button"]:hover {
+            background-color: #23527c;
+        }
+    </style>
+</head>
+<body>
+
+<h1>SIGnUp FORM</h1>
+
+<div id="form">
+    <form>
+        <label>Full Name:</label>
+        <input type="text" name="" placeholder="Enter Name">
+
+        <label>Password:</label>
+        <input type="password" name="" placeholder="Password">
+
+        <label>Phone No:</label>
+        <input type="number" name="" placeholder="Number">
+
+        <label>Gender:</label>
+        <label>Male</label>
+        <input type="radio" name="gender" value="male">
+        <label>Female</label>
+        <input type="radio" name="gender" value="female"> <br><br>
+
+        <label>Country:</label>
+        <select id="country" name="country">
+            <option hidden disabled selected value></option>
+            <option value="Nepal">Nepal</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">United Kingdom</option>
+            <option value="USA">United States</option>
+        </select>
+
+        <label>Gmail:</label>
+        <input type="email" name="gmail" placeholder="Enter gmail">
+
+        <br>
+
+        	<label> Upload
+        	</label><input type="button" name="" value="Upload">
+        
+        <label>Reset</label>
+        <input type="reset" name="">  <br><br>
+        
+
+        <label><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Confirm:</b></label>
+        <input type="submit" name="Confirm">
+    </form>
+</div>
+
+</body>
+</html>
