@@ -7,6 +7,14 @@
     height: 100vh;
 } */
 
+#childSelector li > p{
+    color: red;
+
+} 
+#childSelector ul p{               
+    color: greenyellow;
+}
+
 .testing p{
     width: 70%;
     margin-left: auto;
@@ -19,9 +27,23 @@
     font-style: italic;
     text-transform: lowercase;
     color: red;
+    letter-spacing: 5pxs;
    
     text-decoration: line-through;
    
 
 
+}
+
+/* h1 + h2{
+    color: red;
+} */
+
+
+*{
+    color: aqua;
+}
+
+h1, h2 {
+    color: blueviolet;
 }
