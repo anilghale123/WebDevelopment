@@ -6,3 +6,42 @@
   target = blank   ---> arko website kholda naya tab ma kholxa
  
    alt = "" --> when internet down show that message
+
+
+
+font{
+    font-family: 'Times New Roman', Times, serif;
+    color: blue;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: lowercase;
+   
+}
+
+we can use <p id/class = "something"> for identifying different paragraph and modify accordingly</p>
+
+childSelector symbol ">"   #id_Name li > p{
+    color: red;
+
+}
+
+descended child --> ul p{  }
+
+
+ adjacent selector -->  
+h1 + h2{              --> ONLY apply to h2
+    color: red;
+
+
+}
+
+
+universal selector --> *{
+    color: aqua;
+}
+
+type selector -->  h1, h2 {
+    color: blueviolet;
+}
+
