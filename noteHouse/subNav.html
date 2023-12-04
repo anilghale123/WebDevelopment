@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+         body {
+    margin: 0;
+    padding: 0;
+  
+    overflow: hidden;
+}
+    #subNav{
+        background-color: rgb(216, 198, 198);
+       
+        width: auto;
+        
+    }
+    #subNav ul li{
+        list-style-type: none;
+        float: left;
+        margin-right: 30px;
+        margin-left: 50px;
+        padding-top: 10px;
+        
+    }
+
+    #subNav ul li a{
+        text-decoration: none;
+        font-size: 20px;
+        color: black;
+        font-weight: bold;
+        
+                    }
+   #subNav ul li a:hover {
+
+                        color: red;
+                        font-size: 25px;
+   }
+
+</style>
+<body>
+
+    <div id="subNav">
+        <ul>
+            <li> <a href="chapters.html" onclick="loadContent('chapters.html', 'content')">Chapter</a> </li>
+            <li> <a href="syllabus.html" onclick="loadContent('syllabus.html', 'content')">Syllabus</a> </li>
+            <li> <a href="question-banks.html" onclick="loadContent('question-banks.html', 'content')">Question Banks</a> </li>
+            <li> <a href="solutions.html" onclick="loadContent('solutions.html', 'content')">Solutions</a> </li>
+        </ul>
+    </div>
+ 
+    <div id="content">
+        <!-- Content will be loaded here -->
+    </div>
+ 
+    <script>
+        function loadContent(url, elementId) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                  document.getElementById(elementId).innerHTML = data;
+                });
+        }
+    </script>
+       
+      
+       
+      
+      
+      
+    
+
+
+</body>
+</html>
