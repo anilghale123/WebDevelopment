@@ -1,54 +1,14 @@
-#nav{
-    background-color: rgb(37, 34, 34);
-    height: 65px;
-    width: auto;
-    border-bottom: 4px solid #fc0000;
-}
 
-#nav ul{
-    list-style-type: none;
+body {
     margin: 0;
-    padding: 5;
+    padding: 0;
+    height: 100vh; /* Set body height to 100% of the viewport height */
 }
-
-#nav ul li a{
-    display: block;
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
-    float: left;
-    padding: 15px;
-    font-weight: bold;
-    }
-
-    #nav ul li a:hover {
-        background-color: #f91313; /* Change the background color on hover */
-        transition: background-color 0.3s ease; /* Add a smooth transition effect */
-    }
-    #nav ul li a.home {
-        
-    }
-
-    #nav p{
-        float: left;
-        color: white;
-        margin-left: 10px;
-        font-size: 30px;
-        margin-top: 15px;
-        font-weight: bold;
-        margin-right: 350px;
-    }
-
-    h1{
-        text-align: center;
-        font-size: 50px;
-        margin: 10px; 
-    }
-
     #intro{
         height: 300px;
         width: auto;
         background-color: rgb(247, 233, 215);
+        
     }
 
     #intro h3{
@@ -146,6 +106,22 @@
         margin-top: 2px;
         padding-top: 0px;
     }
+
+    #why button{
+        height: 50px;
+        width: 110px;
+        background-color: rgb(159, 255, 159);
+        margin-left: 100px;
+    }
+    
+    #why button a{
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: black;
+    }
+
+    
 
     #footer{
         background-color: rgb(34, 16, 16);
