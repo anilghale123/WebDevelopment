@@ -44,12 +44,16 @@
 <body>
 
     <div id="subNav">
+
+   
+    <nav>
         <ul>
-            <li> <a href="chapters.html" onclick="loadContent('chapters.html', 'content')">Chapter</a> </li>
-            <li> <a href="syllabus.html" onclick="loadContent('syllabus.html', 'content')">Syllabus</a> </li>
-            <li> <a href="question-banks.html" onclick="loadContent('question-banks.html', 'content')">Question Banks</a> </li>
-            <li> <a href="solutions.html" onclick="loadContent('solutions.html', 'content')">Solutions</a> </li>
+            <li><a id="sec-1" href="chapters.html">Chapters</a></li>
+            <li><a id="sec-2" href="iot.html">Syllabus</a></li>
+            <li><a id="sec-3" href="#question-banks">Question Banks</a></li>
+            <li><a id="sec-4" href="#solutions">Solutions</a></li>
         </ul>
+    </nav>
     </div>
  
     <div id="content">
@@ -61,11 +65,21 @@
             fetch(url)
                 .then(response => response.text())
                 .then(data => {
-                  document.getElementById(elementId).innerHTML = data;
+                   document.getElementById(elementId).innerHTML = data;
                 });
         }
+ 
+        // Load the content of the 'chapters' section by default
+        loadContent('chapters.html', 'content');
+ 
+        // When a link is clicked, load the content of the corresponding section
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default action of the hyperlink
+                loadContent(this.href, 'content');
+            });
+        });
     </script>
-       
       
        
       
