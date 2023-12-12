@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        
+html{
+    font-size: 62.5%;
+}
         body {
     margin: 0;
     padding: 0;
@@ -12,10 +16,10 @@
     overflow: hidden;
 }
         #nav{
-    background-color: rgb(37, 34, 34);
-    height: 60px;
+    background-color: white;
+    height: 6rem;
     width: auto;
-    border-bottom: 4px solid #fc0000;
+    border-bottom: 4px solid black;
     margin: 0;
     padding: 0;
 }
@@ -23,33 +27,48 @@
 #nav ul{
     list-style-type: none;
     margin: 0;
-    padding: 5;
+    padding: 0.5rem;
 }
 
 #nav ul li a{
     display: block;
     text-decoration: none;
-    color: white;
-    font-size: 30px;
+    color: black;
+    font-size: 3rem;
     float: left;
-    padding: 15px;
+    padding-right: 2rem;
+    padding-top: 1rem;
     font-weight: bold;
     }
 
     #nav ul li a:hover {
-        background-color: #f91313; /* Change the background color on hover */
-        transition: background-color 0.3s ease; /* Add a smooth transition effect */
+       font-size: 3rem;
+       color: red;
     }
    
 
     #nav p{
         float: left;
-        color: white;
-        margin-left: 10px;
-        font-size: 30px;
-        margin-top: 15px;
+        color: black;
+        margin-left: 1rem;
+        font-size: 3rem;
+        margin-top: 1.5rem;
         font-weight: bold;
-        margin-right: 350px;
+        margin-right: 35rem;
+    }
+
+    @media (max-width:998px) {
+        html{
+            font-size: 45%;
+        }
+        
+    }
+
+    @media (max-width:768px) {
+        html{
+            font-size: 30%;
+        }
+        
     }
 
     </style>
