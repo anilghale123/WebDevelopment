@@ -1,26 +1,30 @@
+
+html{
+    font-size: 62.5%;
+}
 #subjects{
-    height: 520px;
+    height: 52rem;
     width: auto;
     background-color: rgb(247, 233, 215);
 }
 
 #subjects p{
     text-align: center;
-    font-size: 40px;
-    padding-top: 15px;
+    font-size: 3rem;
+    padding-top: 1.5rem;
     font-weight: bold;
 }
 .sub {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
-    padding-top: 5px;
-    margin-top: 20px;
+    margin-bottom: 2rem;
+    padding-top: 0.5rem;
+    margin-top: 2rem;
 }
 
 .sub a{
     text-decoration: none;
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -29,16 +33,16 @@
 }
 
 .block {
-    width: 355px;
-    height: 100px;
+    width: 35rem;
+    height: 10rem;
     text-align: center;
-    line-height: 100px; 
-    font-size: 18px;
+    line-height: 10rem; 
+    font-size: 1.8rem;
     color: #fff;
-    border-radius: 8px;
+    border-radius: 0.8rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 20rem;
+    margin-right: 20rem;
 }
 
 /* Assign different background colors to each block */
@@ -56,4 +60,19 @@
 
 .block:nth-child(2) {
     background-color: #f39c12; /* Orange */
+}
+
+
+@media (max-width:998px) {
+    html{
+        font-size: 45%;
+    }
+    
+}
+
+@media (max-width:768px) {
+    html{
+        font-size: 25%;
+    }
+    
 }
