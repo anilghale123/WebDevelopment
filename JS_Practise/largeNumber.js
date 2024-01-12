@@ -34,4 +34,13 @@ let result = document.getElementById("result");
 
 
  }
+ 
 
+ function test()
+ {
+    var k = 10;
+    
+ }
+ console.log(k);
+
+ test();

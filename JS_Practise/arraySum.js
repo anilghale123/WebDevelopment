@@ -9,7 +9,7 @@ var arrayOfDigits;
 var arrayOfDigits2;
 var arrayOfDigits3;
 
-// First loop
+
 for (let i = 0; i < arr.length - 1; i++) {
    sum = arr[i] + arr[i + 1];
    
@@ -22,7 +22,7 @@ for (let i = 0; i < arr.length - 1; i++) {
    }
 }
 
-// Second loop
+
 for (let i = 0; i < arr2.length - 1; i++) {
   
       sum2 = arr2[i] + arr2[i+1];
@@ -36,7 +36,7 @@ for (let i = 0; i < arr2.length - 1; i++) {
    } 
 
 
-// Third loop
+
 for (let i = 0; i < arr3.length - 1; i++) {
  
       sum3 = arr3[i] + arr3[i+1];

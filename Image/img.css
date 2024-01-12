@@ -1,0 +1,91 @@
+body{
+    background-color: beige;
+    display: grid;
+}
+
+  .container{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    place-items: center;
+  }
+
+  .image{
+    
+    padding: 200px;
+    perspective: 100px;
+    display: flex;
+  }
+  
+.image img{
+    padding: 20px;
+    display: flex;
+    width: 500px;
+    transition: transform 1s;
+}
+.image :hover{
+    transform: translateZ(5px);
+
+}
+
+.slide-container{
+    display: flex;
+    width: 700px;
+    animation: slide 20s infinite linear; 
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translate(-2000px);
+    }
+}
+
+  
+
+ 
+.image{
+    height: 500px;
+    width: 500px;
+    /* background-color: red;
+    background-image: url("d.jpg");
+    position: absolute;
+    transform: translate(120%); */
+    /* box-sizing: border-box; */
+    /* box-shadow: 4px 4px 20px 20px black; */
+    /* animation: slide 5s infinite linear; */
+}
+
+
+   /* @keyframes slide{
+     0%{
+        background-image: url(a.jpg);
+     }
+     25%{
+        background-image: url(b.jpg);
+
+     }
+     50%{
+        background-image: url(c.jpg);
+
+     }
+     60%
+     {
+        background-image: url(d.jpg);
+     }
+
+   }
+.image h1{
+    text-align: center;
+    color: white;
+}
+
+.image img{
+    height: 200px;
+    width: 100;
+    position: absolute;
+    
+} */ 

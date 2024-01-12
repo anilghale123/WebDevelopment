@@ -1,5 +1,6 @@
 
   var originalFilename;
+  
 
   document.getElementById('fileInput').addEventListener('change', function(evt) {
    var file = evt.target.files[0];
@@ -8,23 +9,27 @@
        var contents = e.target.result;
        window.selectedFileContents = contents;
        originalFilename = file.name;
+       
    };
    reader.readAsBinaryString(file);
   });
   
   window.encryptFile = function() {
-   var password = prompt('Enter a password to encrypt the file:');
-   var keyBytes = CryptoJS.SHA256(password).toString(CryptoJS.enc.Hex);
-   var encryptedData = CryptoJS.AES.encrypt(window.selectedFileContents, keyBytes).toString();
-   downloadFile(encryptedData, originalFilename);
-  };
+    var password = prompt('Enter a password to encrypt the file:');
+    var keyBytes = CryptoJS.SHA256(password).toString(CryptoJS.enc.Hex);
+    var encryptedData = CryptoJS.AES.encrypt(window.selectedFileContents, keyBytes);
+    downloadFile(encryptedData, originalFilename);
+   };
+   
   
-  window.decryptFile = function() {
-   var password = prompt('Enter the password to decrypt the file:');
-   var keyBytes = CryptoJS.SHA256(password).toString(CryptoJS.enc.Hex);
-   var decryptedData = CryptoJS.AES.decrypt(window.selectedFileContents, keyBytes).toString(CryptoJS.enc.Utf8);
-   downloadFile(decryptedData, originalFilename);
-  };
+   window.decryptFile = function() {
+    var password = prompt('Enter the password to decrypt the file:');
+    var keyBytes = CryptoJS.SHA256(password).toString(CryptoJS.enc.Hex);
+    var encryptedData = convertWordArrayToUint8Array(window.selectedFileContents);
+    var decryptedData = CryptoJS.AES.decrypt(encryptedData, keyBytes).toString(CryptoJS.enc.Utf8);
+    downloadFile(decryptedData, originalFilename);
+   };
+   
   
    
    function convertWordArrayToUint8Array(wordArray) {

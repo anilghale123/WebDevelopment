@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        border: 2px solid black;
+        /* display: inline-block; */
+        display: flex;
+        justify-content: center;
+
+
+        padding: 45px;
+        margin: 50px;
+        /* display: inline;
+        padding: 45px; 
+        in inline property there will be no padding top and margin top
+        so we need to make it inline-block to gain that*/  
+
+    }
+
+    .box1{
+        /* visibility: hidden;  --> it totally hide box
+        display: hidden; -->it only hide border*/
+
+    }
+</style>
+<body>
+    <div class="box">
+        hello
+
+    </div>
+
+    <div class="box box1">
+        hello world
+
+    </div>
+</body>
+</html>
