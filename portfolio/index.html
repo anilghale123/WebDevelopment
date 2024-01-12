@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sidebar Menu </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+        <style>
+            #port{
+                margin-left: 50px;
+            }
+
+        </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="left-menu">
+            <div class="logo">
+                <!-- <img src="./logo.png" alt=""> -->
+                <span id="port">PortFolio</span>
+            </div>
+            <ul>
+                <li class="sidebar-item"><a class="sidebar-link" href="home.html" ><i class="fa-solid fa-house"></i> Home </a>
+                </li>
+                <li class="sidebar-item"><a class="sidebar-link" href="about.html"><i class="fa-solid fa-user"></i> About </a>
+                </li>
+                <li class="sidebar-item"><a class="sidebar-link" href="#"><i class="fa-solid fa-file"></i> Services </a>
+                </li>
+                <li class="sidebar-item"><a class="sidebar-link" href="#"><i class="fa-solid fa-store"></i> Skills </a>
+                </li>
+                <li class="sidebar-item"><a class="sidebar-link" href="#"><i class="fa-solid fa-calendar-days"></i>
+                        Teams </a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="#"><i class="fa-solid fa-message"></i> Contacts
+                    </a></li>
+                
+            </ul>
+        </div>
+        <!-- Right Content Goes here -->
+        <div class="right-content">
+        <div id="contentDiv"></div>
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.sidebar-link').forEach((link) => {
+   link.addEventListener('click', (event) => {
+       event.preventDefault();
+       fetch(event.target.getAttribute('href'))
+           .then(response => response.text())
+           .then(data => {
+               document.getElementById('contentDiv').innerHTML = data;
+           });
+   });
+});
+
+    </script>
+</body>
+</html>
