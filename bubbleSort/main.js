@@ -23,7 +23,13 @@ class BubbleSort {
         for (let i = 0; i < this.array.length; i++) {
             c.beginPath();
             c.rect(this.xPositions[i], 600, 40, -this.array[i]);
-            c.fillStyle = this.color; 
+            if (i === this.currentStep) {
+                c.fillStyle = "red"; // Color for the first element being compared
+            } else if (i === this.currentStep + 1) {
+                c.fillStyle = "blue"; // Color for the second element being compared
+            } else {
+                c.fillStyle = "green"; // Default color
+            } 
             c.fill();
         }
     }
