@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+   
 </head>
 <style>
-    @keyframes fadeIn {
- 0% {opacity: 0;}
- 100% {opacity: 1;}
-}
+   
 .home{
     display: flex;
-    background: url("image/wow.jpg") no-repeat center;
+    background-color: black;
+    /* background: url("image/wow.jpg") no-repeat center; */
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -29,8 +28,13 @@
 }
 
 .home .home-content{
-    margin-left: 150px;
-    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    text-align: center;
+    justify-content: center;
+    margin-left: 50vh;
+    /* margin-top: 100px; */
 }
 
 .home .home-content .text-1{
@@ -46,7 +50,7 @@
     margin: 5px 0;
 }
 .home .home-content .text-3 span{
-    color: crimson;
+    color: white;
     font-weight: 500;
 }
 .home .home-content a{
@@ -81,54 +85,11 @@
             </div>
         </div>
     </section>
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
 
-      <script>
- let words = document.querySelector('p').textContent.split(' ');
-document.querySelector('p').textContent = '';
+      <script src="js/typing.js">
 
-words.forEach((word, index) => {
-   setTimeout(() => {
-       document.querySelector('p').innerHTML += `${word} `;
-   }, 300 * index);
-});
-
-
-var typed = new Typed(".typing", {
-        strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
-
-    var typed = new Typed(".typing-2", {
-        strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
-
-    // owl carousel script
-    $('.carousel').owlCarousel({
-        margin: 20,
-        loop: true,
-        autoplay: true,
-        autoplayTimeOut: 2000,
-        autoplayHoverPause: true,
-        responsive: {
-            0:{
-                items: 1,
-                nav: false
-            },
-            600:{
-                items: 2,
-                nav: false
-            },
-            1000:{
-                items: 3,
-                nav: false
-            }
-        }
-    });
 
       </script>
       
