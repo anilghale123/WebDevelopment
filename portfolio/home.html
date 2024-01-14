@@ -7,14 +7,16 @@
    
 </head>
 <style>
-   
+   body{
+    background-color: black;
+   }
 .home{
     display: flex;
-    background-color: black;
+    /* background-color: black; */
     /* background: url("image/wow.jpg") no-repeat center; */
     height: 100vh;
     color: #fff;
-    min-height: 500px;
+    /* min-height: 500px; */
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
@@ -47,7 +49,7 @@
 @keyframes my-animation {
   from {
     /* background-color: ; */
-    width: 0px;
+    width: 150px;
     top: 100px;
   }
   to {
@@ -93,11 +95,63 @@
 
 
 
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+  }
+}
+
+.container {
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .home-content .avatar img{
+
+  width: 150px;
+  height: 150px;
+  /* box-sizing: border-box; */
+  border: 5px white solid;
+  border-radius: 50%;
+  overflow: hidden;
+  /* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+  img { width: 100%; height: auto; }
+}
+
+
+
 </style>
 <body>
+    
+       
+
+
+    
+
     <section class="home" id="home">
+       
         <div class="max-width">
+           
             <div class="home-content">
+                <div class="avatar">
+                   
+                      <img src="image/wow.jpg">
+                    </a>
+                  </div>
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Anil Ghale</div>
                 <div class="text-3">And I'm a WebDevloper<span class="typing"></span></div>
