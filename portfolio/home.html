@@ -35,6 +35,26 @@
     justify-content: center;
     margin-left: 50vh;
     /* margin-top: 100px; */
+
+    animation-name: my-animation;
+  animation-duration: 5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+@keyframes my-animation {
+  from {
+    /* background-color: ; */
+    width: 0px;
+    top: 100px;
+  }
+  to {
+    background-color: black;
+    width: 550px;
+    top: 100px;
+  }
 }
 
 .home .home-content .text-1{
@@ -80,8 +100,9 @@
             <div class="home-content">
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Anil Ghale</div>
-                <div class="text-3">And I'm a <span class="typing"></span></div>
-                <a href="#">Hire me</a>
+                <div class="text-3">And I'm a WebDevloper<span class="typing"></span></div>
+                <p>Want to see my work <a href="about.html">click here</a></p>
+                
             </div>
         </div>
     </section>
